@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>StudyBuddy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/style.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-50 text-gray-900 font-sans">
+
+    <!-- Navbar -->
+    <header class="bg-white shadow sticky top-0 z-10">
+      <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-6">
+          <h1 class="text-xl font-bold text-blue-600 flex items-center gap-1">
+            📘 StudyBuddy
+          </h1>
+          <div class="space-x-4 text-sm">
+            <button class="nav-btn hover:text-blue-600" data-target="home">Home</button>
+            <button class="nav-btn hover:text-blue-600" data-target="ask">Ask for Help</button>
+            <button class="nav-btn hover:text-blue-600" data-target="requests">Help Requests</button>
+            <button class="nav-btn hover:text-blue-600" data-target="profile">My Profile</button>
+          </div>
+        </div>
+        <div class="space-x-2 text-sm">
+          <button class="px-3 py-1 rounded border text-gray-700 hover:border-blue-600">Sign In</button>
+          <button class="px-3 py-1 rounded bg-blue-900 text-white hover:bg-blue-700">Sign Up</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 py-10 space-y-12">
+
+      <!-- Home Section -->
+      <section id="home" class="tab-section">
+        <div class="text-center space-y-4">
+          <h2 class="text-4xl font-bold text-blue-700">StudyBuddy</h2>
+          <p class="text-lg text-gray-600">A peer-to-peer platform where students can request homework help and offer explanations to others.</p>
+        </div>
+        <div class="grid sm:grid-cols-3 gap-6 mt-10">
+          <div class="bg-white rounded-lg shadow p-6 text-center space-y-3">
+            <div class="text-4xl text-blue-600">📖</div>
+            <h3 class="font-semibold text-lg">Ask for Help</h3>
+            <p class="text-sm text-gray-600">Post your question and get help from other students</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded text-sm nav-btn" data-target="ask">Ask Question</button>
+          </div>
+          <div class="bg-white rounded-lg shadow p-6 text-center space-y-3">
+            <div class="text-4xl text-blue-600">🧑‍🤝‍🧑</div>
+            <h3 class="font-semibold text-lg">Help Requests</h3>
+            <p class="text-sm text-gray-600">Browse questions and offer your help</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded text-sm nav-btn" data-target="requests">View Requests</button>
+          </div>
+          <div class="bg-white rounded-lg shadow p-6 text-center space-y-3">
+            <div class="text-4xl text-blue-600">👤</div>
+            <h3 class="font-semibold text-lg">Helper Profile</h3>
+            <p class="text-sm text-gray-600">View your profile, stats and more</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded text-sm nav-btn" data-target="profile">My Profile</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ask Form Section -->
+      <section id="ask" class="tab-section hidden">
+        <h2 class="text-2xl font-bold mb-2">Ask for Help</h2>
+        <form id="ask-form" class="bg-white p-6 rounded-lg shadow space-y-4"></form>
+      </section>
+
+      <!-- Help Requests Section -->
+      <section id="requests" class="tab-section hidden">
+        <h2 class="text-2xl font-bold mb-4">Help Requests</h2>
+        <input type="text" placeholder="🔍 Search requests..." class="mb-4 w-full border px-3 py-2 rounded text-sm" />
+        <div id="requests-list" class="space-y-4"></div>
+      </section>
+
+      <!-- Profile Section -->
+      <section id="profile" class="tab-section hidden">
+        <div id="profile-card" class="bg-white rounded-lg shadow overflow-hidden"></div>
+      </section>
+
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
